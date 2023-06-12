@@ -1,11 +1,11 @@
 /* CSS file placeholder. */
 @font-face {
   font-family: sofachrome;
-  src: url("/sofachrome.ttf");
+  src: url("/space-2-archive/sofachrome.ttf");
 }
 @font-face {
   font-family: fff-forward;
-  src: url("/fff-forward.regular.ttf");
+  src: url("/space-2-archive/fff-forward.regular.ttf");
 }
 html {
   overflow-y: scroll;
