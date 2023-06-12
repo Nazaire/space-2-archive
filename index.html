@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="whammy.js"></script>
+    <script type="text/javascript" src="CanvasRecorder.js"></script>
+    <script type="text/javascript" src="SAT.js"></script>
+    <!-- <script type="text/javascript" src="buy.js"></script> -->
+    <!-- <script type="text/javascript" src="google-analytics-bundle.js"></script> -->
+    <!-- <script type="text/javascript" src="my_ga.js"></script> -->
+    <script type="text/javascript" src="game_audio.js"></script>
+    <script type="text/javascript" src="game_abilities.js"></script>
+    <script type="text/javascript" src="game_storage.js"></script>
+    <script type="text/javascript" src="game_init.js"></script>
+    <script type="text/javascript" src="game_classes.js"></script>
+    <script type="text/javascript" src="game_functions.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <video id="video" width="320" height="240" controls></video>
+      <div class="gameStripes"></div>
+      <div id="gameTitle">SPACE II</div>
+    </div>
+    <div id="gameArea">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div id="gameDetailsWrapper">
+      <div class="gameStripes">
+        <div id="version">v1.2.13 (DEV)</div>
+        <div id="reset" title="In case the game crashes">Reset</div>
+      </div>
+      <div id="gameDetails">
+        <div id="backgroundimage"></div>
+        <div id="backgroundimageL"></div>
+        <div id="backgroundimageR"></div>
+        <div id="gameButton" class="">LAUNCH</div>
+        <div id="gameModeWrapper">
+          <div class="gamemode selected">Single Player</div>
+          <div class="gamemode">Co-op</div>
+          <div class="gamemode">Versus</div>
+        </div>
+        <div id="abilityWrapper">
+          <div id="toparrow"></div>
+          <div id="bottomarrow"></div>
+          <div id="abilityWrapperScroller">An error occured</div>
+        </div>
+        <div id="bankWrapper">
+          <div id="bankCount">$400</div>
+          <div id="bankReward"></div>
+        </div>
+        <div id="review">Please review Space 2!</div>
+        <div id="facebook">Share this on facebook!</div>
+        <div id="footer">
+          <div id="help">Controls</div>
+          <div id="bugs">Support</div>
+          <div id="developer">- Dylan Kay 2016 -</div>
+          <!--<div id="reset">Reset Game</div>-->
+        </div>
+        <div id="player1" class="colorWrapper">
+          <div class="colorTitle">Player 1</div>
+          <div class="colorRow colorRowBase">
+            <div class="colorContainer">
+              <div class="colorItem colorBlue"></div>
+              <div class="colorItem colorGreen"></div>
+              <div class="colorItem colorRed"></div>
+              <div class="colorItem colorYellow"></div>
+              <div class="colorItem colorPurple"></div>
+              <div class="colorItem colorPink"></div>
+            </div>
+            <div class="colorRowTitle">Base</div>
+            <div class="colorOverlay">$1000</div>
+          </div>
+          <div class="colorRow colorRowTrail locked">
+            <div class="colorContainer">
+              <div class="colorItem colorBlue"></div>
+              <div class="colorItem colorGreen"></div>
+              <div class="colorItem colorRed"></div>
+              <div class="colorItem colorYellow"></div>
+              <div class="colorItem colorPurple"></div>
+              <div class="colorItem colorPink"></div>
+            </div>
+            <div class="colorRowTitle">Trail</div>
+            <div class="colorOverlay">Reach Round 8</div>
+          </div>
+          <div class="specialsRow">
+            <div class="specialsItem prism locked">
+              PRISM
+              <div class="specialsOverlay">Buy Now</div>
+            </div>
+            <div class="specialsRowTitle">Specials</div>
+          </div>
+        </div>
+        <div id="player2" class="colorWrapper">
+          <div class="colorTitle">Player 2</div>
+          <div class="colorRow colorRowBase">
+            <div class="colorContainer">
+              <div class="colorItem colorBlue"></div>
+              <div class="colorItem colorGreen"></div>
+              <div class="colorItem colorRed"></div>
+              <div class="colorItem colorYellow"></div>
+              <div class="colorItem colorPurple"></div>
+              <div class="colorItem colorPink"></div>
+            </div>
+            <div class="colorRowTitle">Base</div>
+            <div class="colorOverlay">$1000</div>
+          </div>
+          <div class="colorRow colorRowTrail locked">
+            <div class="colorContainer">
+              <div class="colorItem colorBlue"></div>
+              <div class="colorItem colorGreen"></div>
+              <div class="colorItem colorRed"></div>
+              <div class="colorItem colorYellow"></div>
+              <div class="colorItem colorPurple"></div>
+              <div class="colorItem colorPink"></div>
+            </div>
+            <div class="colorRowTitle">Trail</div>
+            <div class="colorOverlay">Reach Round 8</div>
+          </div>
+          <div class="specialsRow">
+            <div class="specialsItem prism locked">
+              PRISM
+              <div class="specialsOverlay">Buy Now</div>
+            </div>
+            <div class="specialsRowTitle">Specials</div>
+          </div>
+        </div>
+        <div id="purchaseWrapper">
+          <div id="purchaseTitle">Purchase</div>
+          <div id="purchaseButton">
+            BOOST <br />
+            OWNED
+          </div>
+          <div id="purchaseDropdown">
+            <button id="purchaseDropdownButton">Ability</button>
+            <div id="purchaseDropdownContent">
+              <a href="#">Boost</a>
+              <a href="#">Lasersight</a>
+              <a href="#">Cloak</a>
+            </div>
+          </div>
+        </div>
+        <div id="statsWrapper">
+          <div id="statsTitle">Statistics</div>
+          <div id="stats">
+            Singleplayer record: Round 5 <br /><br />
+            Co-Op record: Round 7 <br /><br />
+            Total Kills: 567
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="volControl">Mute</div>
+  </body>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="pageController.js"></script>
+</html>

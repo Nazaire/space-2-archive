@@ -1,0 +1,684 @@
+/* CSS file placeholder. */
+@font-face {
+  font-family: sofachrome;
+  src: url("/sofachrome.ttf");
+}
+@font-face {
+  font-family: fff-forward;
+  src: url("/fff-forward.regular.ttf");
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  margin: 0px;
+  background: #465298;
+}
+
+#header {
+  position: relative;
+  background: black;
+  float: left;
+  width: 100%;
+  height: 150px;
+}
+#gameTitle {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  font-family: sofachrome;
+  color: white;
+  font-weight: bold;
+  font-size: 120px;
+}
+#video {
+  display: none;
+}
+#version {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: sofachrome;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+#gameArea {
+  float: left;
+  width: 100%;
+  background: black;
+}
+#canvas {
+  width: calc(100% - 10px);
+  border: #465298 solid 5px;
+  background: black;
+}
+#gameDetailsWrapper {
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(37, 40, 84, 1) 0%,
+    rgba(46, 54, 105, 1) 50%,
+    rgba(37, 40, 84, 1) 100%
+  );
+  float: left;
+  width: 100%;
+  height: 1200px;
+}
+#gameDetails {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  height: 440px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5) inset;
+}
+.gameStripes {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 60px;
+  background: repeating-linear-gradient(
+    90deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+#header .gameStripes {
+  bottom: 0px;
+}
+#gameDetailsWrapper .gameStripes {
+  top: 0px;
+}
+
+#gameButton {
+  font-family: sofachrome;
+  font-size: 20px;
+  color: white;
+  width: 180px;
+  height: 30px;
+  background: #a2d53c;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 100px);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 0px 0px #2e871d;
+}
+#gameButton:hover {
+  top: 55px;
+  box-shadow: 0px 5px 0px 0px #2e871d;
+}
+#gameButton.selected {
+  top: 50px;
+  background: #d7843c;
+  box-shadow: 0px 10px 0px 0px #b04f2b;
+  cursor: wait;
+}
+#backgroundimage {
+  width: 400px;
+  height: 400px;
+  background: url(back.png);
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 200px);
+  opacity: 0.2;
+}
+#backgroundimageL {
+  width: 160px;
+  height: 1200px;
+  background: url(backL.png);
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  opacity: 0.2;
+}
+#backgroundimageR {
+  width: 160px;
+  height: 1200px;
+  background: url(backR.png);
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  opacity: 0.2;
+}
+#gameModeWrapper {
+  position: absolute;
+  width: 180px;
+  height: 210px;
+  padding: 10px;
+  background: #606dbc;
+  top: 50px;
+  left: calc(20% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+.gamemode {
+  float: left;
+  height: 50px;
+  width: 160px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 20px;
+  font-family: sofachrome;
+  font-size: 20px;
+  cursor: pointer;
+}
+.gamemode:hover {
+  background: #bd8260;
+}
+.gamemode.selected {
+  background: #bd8260;
+}
+
+#abilityWrapper {
+  position: absolute;
+  width: 180px;
+  height: 210px;
+  padding: 10px;
+  background: #606dbc;
+  top: 50px;
+  left: calc(80% - 100px);
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#abilityWrapperScroller {
+  width: 207px;
+  height: 210px;
+  overflow-y: scroll;
+}
+#bottomarrow {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-bottom: 20px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+#toparrow {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.ability {
+  float: left;
+  height: 15px;
+  width: 160px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 20px;
+  font-family: sofachrome;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ability:hover {
+  background: #bd8260;
+}
+.ability.selected {
+  background: #bd8260;
+}
+
+#purchaseWrapper {
+  position: absolute;
+  width: 260px;
+  height: 210px;
+  padding: 10px;
+  background: #606dbc;
+  top: 350px;
+  left: calc(20% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+#purchaseTitle {
+  position: absolute;
+  width: 260px;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+}
+#statsWrapper {
+  position: absolute;
+  width: 260px;
+  height: 210px;
+  padding: 10px;
+  background: #606dbc;
+  top: 350px;
+  right: calc(20% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+#statsTitle {
+  position: absolute;
+  width: 260px;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+}
+#stats {
+  position: absolute;
+  font-family: fff-forward;
+  font-size: 11px;
+  color: white;
+  width: 240px;
+  padding: 10px;
+  border-radius: 20px;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#purchaseDropdown {
+  position: relative;
+  top: 30px;
+  left: calc(50% - 80px);
+  display: inline-block;
+}
+#purchaseDropdownButton {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: "fff-forward";
+  color: white;
+  width: 160px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+#purchaseDropdown:hover #purchaseDropdownButton {
+  background-color: #bd8260;
+}
+#purchaseDropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+#purchaseDropdownContent a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+#purchaseDropdownContent a:hover {
+  background: #f1f1f1;
+}
+#purchaseDropdown:hover #purchaseDropdownContent {
+  display: block;
+}
+#purchaseButton {
+  font-family: sofachrome;
+  font-size: 15px;
+  color: white;
+  width: 180px;
+  height: 45px;
+  background: #a2d53c;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 100px);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 0px 0px #2e871d;
+}
+#purchaseButton:hover {
+  top: 125px;
+  box-shadow: 0px 5px 0px 0px #2e871d;
+}
+
+#bankWrapper {
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  padding: 10px;
+  background: #606dbc;
+  top: 150px;
+  left: calc(50% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+#bankCount {
+  position: absolute;
+  top: 10px;
+  font-family: fff-forward;
+  font-size: 15px;
+  color: white;
+  width: 160px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 20px;
+}
+#player1.colorWrapper {
+  position: absolute;
+  width: 260px;
+  height: 300px;
+  padding: 10px;
+  background: #606dbc;
+  top: 600px;
+  left: calc(20% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+#player2.colorWrapper {
+  position: absolute;
+  width: 260px;
+  height: 300px;
+  padding: 10px;
+  background: #606dbc;
+  top: 600px;
+  right: calc(20% - 100px);
+  color: white;
+  border-radius: 20px;
+}
+.specialsRow {
+  position: absolute;
+  top: 220px;
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.specialsRowTitle {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  font-family: sofachrome;
+  color: yellow;
+  font-size: 10px;
+  left: 75px;
+  top: 2px;
+}
+.specialsItem.prism {
+  position: absolute;
+  width: 200px;
+  height: 35px;
+  border-radius: 18.5px;
+  left: 25px;
+  top: 20px;
+  border: white 3px solid;
+  cursor: pointer;
+  font-family: sofachrome;
+  text-align: center;
+  font-size: 25px;
+  color: "white";
+  background: radial-gradient(
+    ellipse at center,
+    rgba(158, 217, 255, 0) 0%,
+    rgba(82, 187, 255, 0.6) 100%
+  );
+}
+.specialsItem:hover {
+  box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.specialsItem.selected {
+  border-color: yellow;
+}
+.specialsOverlay {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 35px;
+  padding: 0px;
+  border-radius: 18.5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+  cursor: pointer;
+}
+.specialsItem.locked:hover .specialsOverlay {
+  display: block;
+}
+.colorRow {
+  position: absolute;
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.colorTitle {
+  position: absolute;
+  width: 260px;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+}
+.colorRow {
+  position: absolute;
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.colorOverlay {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+  cursor: pointer;
+}
+.colorRow.locked {
+  overflow: hidden;
+}
+.colorRow.locked:hover .colorOverlay {
+  display: block;
+}
+.colorRowBase {
+  top: 40px;
+}
+.colorRowTrail {
+  top: 130px;
+}
+.colorRowTitle {
+  position: absolute;
+  width: 50px;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 9px;
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+  left: 10px;
+  bottom: 0px;
+}
+.colorItem {
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-radius: 18.5px;
+  margin: 14.5px 10px;
+  border: white 3px solid;
+  cursor: pointer;
+}
+.colorItem:hover {
+  box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.colorItem.selected {
+  border-color: yellow;
+}
+.colorContainer,
+.specialsContainer {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+}
+.colorBlue {
+  background-color: #52bbff;
+}
+.colorGreen {
+  background-color: #a3ff52;
+}
+.colorRed {
+  background-color: #df4a4a;
+}
+.colorYellow {
+  background-color: #f7f13e;
+}
+.colorPurple {
+  background-color: #954ae0;
+}
+.colorPink {
+  background-color: #e588e5;
+}
+#review {
+  position: absolute;
+  width: 180px;
+  height: 25px;
+  padding: 10px;
+  background: #606dbc;
+  top: 280px;
+  left: calc(50% - 100px);
+  color: white;
+  border-radius: 20px;
+  font-family: fff-forward;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+#review:hover {
+  background-color: #bd8260;
+  cursor: pointer;
+}
+#facebook {
+  position: absolute;
+  width: 180px;
+  height: 20px;
+  padding: 10px;
+  background: #606dbc;
+  bottom: 150px;
+  left: calc(50% - 100px);
+  color: white;
+  border-radius: 20px;
+  font-family: fff-forward;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+#facebook:hover {
+  background-color: #bd8260;
+  cursor: pointer;
+}
+#bankReward {
+  position: absolute;
+  font-family: fff-forward;
+  font-size: 13px;
+  color: white;
+  width: 160px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  bottom: 0px;
+}
+#footer {
+  position: absolute;
+  width: 60%;
+  height: 60px;
+  padding: 10px;
+  background: #606dbc;
+  bottom: 50px;
+  left: 20%;
+  color: white;
+  border-radius: 20px;
+}
+#help {
+  position: absolute;
+  width: 50%;
+  left: 0px;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+  top: 10px;
+  cursor: pointer;
+}
+#developer {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+  cursor: pointer;
+}
+#bugs {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  font-family: sofachrome;
+  font-size: 18px;
+  top: 10px;
+  right: 0px;
+  cursor: pointer;
+}
+#help:hover {
+  color: #bd8260;
+}
+#developer:hover {
+  color: #bd8260;
+}
+#bugs:hover {
+  color: #bd8260;
+}
+#volControl {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-family: sofachrome;
+  color: white;
+  cursor: pointer;
+}
+#volControl:hover {
+  color: #e56464;
+}
+#volControl.selected {
+  color: #e56464;
+}
+#reset {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 20px;
+  font-family: sofachrome;
+  color: white;
+  cursor: pointer;
+}
+#reset:hover {
+  color: #e56464;
+}

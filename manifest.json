@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Space 2",
+  "short_name": "Space 2",
+  "description": "Take on the galaxy in this simple yet addicting shooter",
+  "version": "1.2.13",
+  "offline_enabled": true,
+  "minimum_chrome_version": "50",
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+  "permissions": [
+    "https://www.google-analytics.com/",
+    "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1803003149923551",
+    "storage",
+    "tabs"
+  ]
+}
