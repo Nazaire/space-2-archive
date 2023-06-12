@@ -14,46 +14,46 @@ var abilitiesStore = {
   },
   "CLOAK": {
     name: "CLOAK",
-    owned:false,
+    owned:true,
     description:"Sneaky beaky like",
     cost:100
   },
   "LASERSIGHT": {
     name: "LASERSIGHT",
-    owned:false,
+    owned:true,
     description:"BOOM! HEADSHOT!",
     cost:250
   },
   "SHIELD": {
     name: "SHIELD",
-    owned:false,
+    owned:true,
     description:"Can't touch this!",
     cost:500
   },
   
   "FASTRELOAD": {
     name: "FASTRELOAD",
-    owned:false,
+    owned:true,
     description:"Sleight of hand",
     cost:750
   },
   
   "PIERCING": {
     name: "PIERCING",
-    owned:false,
+    owned:true,
     description:"Space kebab",
     cost:1000
   },
   
   "SPREADSHOT": {
     name: "SPREADSHOT",
-    owned:false,
+    owned:true,
     description:"Three is better than one",
     cost:1250
   },
   
   "FLASH": {
-    owned:false,
+    owned:true,
     name: "FLASH",
     description:"For those LoL fans",
     cost:1500
@@ -62,49 +62,49 @@ var abilitiesStore = {
   
   "REBOUND": {
     name: "REBOUND",
-    owned:false,
+    owned:true,
     description:'*Calculated*',
     cost:1750
   },
   
   "SHRINK": {
     name: "SHRINK",
-    owned:false,
+    owned:true,
     description:'Pick on someone your own size!',
     cost:2000
   },
   
   "HODGES": {
     name: "HODGES",
-    owned:false,
+    owned:true,
     description:'I go backwards!',
     cost:2400
   },
   
   "FREEZE": {
     name: "FREEZE",
-    owned:false,
+    owned:true,
     description:'Take the red pill',
     cost:2800
   },
   
   "RATTLING": {
     name: "GATTLING",
-    owned:false,
+    owned:true,
     description:"Pretty much a negev",
     cost:3200
   },
   
   "RICOCHET": {
     name: "RICOCHET",
-    owned:false,
+    owned:true,
     description:'Chain reactions!',
     cost:3600
   },
   
   "NUKE": {
     name: "NUKE",
-    owned:false,
+    owned:true,
     description:'Donald Trumps fav <3',
     cost:4000
   },
